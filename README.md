@@ -1,10 +1,6 @@
-# Spec2Win guidelines
+If you do nothing else follow the [Engineering Fundamentals Checklist](./engineering-fundamentals-checklist.md)!
 
-Distilled guidelines from [ISE Playbook](https://github.com/microsoft/code-with-engineering-playbook)
-
-## "The" Checklist
-
-If you do nothing else follow the [Engineering Fundamentals Checklist](docs/engineering-fundamentals-checklist.md)! It's here to help follow the Engineering Fundamentals.
+The [first week of an ISE project](./the-first-week-of-an-ise-project.md) is a breakdown of the sections of the playbook according to the structure of an Agile sprint.
 
 ## General Guidance
 
@@ -19,30 +15,3 @@ If you do nothing else follow the [Engineering Fundamentals Checklist](docs/engi
 * Report product issues found and provide clear and repeatable engineering feedback!
 * We all own our code and each one of us has an obligation to make all parts of the solution great.
 
-## Resources
-
-* [Engineering Fundamentals Checklist](docs/engineering-fundamentals-checklist.md)
-* [The first week of an ISE project](docs/the-first-week-of-an-ise-project.md)
-
-## Engineering Fundamentals
-
-* [Accessibility](docs/non-functional-requirements/accessibility.md)
-* [Agile Development](docs/agile-development/README.md)
-* [Automated Testing](docs/automated-testing/README.md)
-* [Code Reviews](docs/code-reviews/README.md)
-* [Continuous Delivery (CD)](docs/CI-CD/continuous-delivery.md)
-* [Continuous Integration (CI)](docs/CI-CD/continuous-integration.md)
-* [Design](docs/design/readme.md)
-* [Developer Experience](docs/developer-experience/README.md)
-* [Documentation](docs/documentation/README.md)
-* [Engineering Feedback](docs/engineering-feedback/README.md)
-* [Non Functional Requirements](docs/non-functional-requirements/)
-* [Observability](docs/observability/README.md)
-* [Security](docs/security/README.md)
-* [Source Control](docs/source-control/README.md)
-* [UI/UX](docs/UI-UX/README.md)
-
-## Fundamentals for Specific Technology Areas
-
-* [Machine Learning/AI Fundamentals](docs/ml-and-ai-projects/README.md)
-* [User-Interface Engineering](docs/UI-UX/README.md)
