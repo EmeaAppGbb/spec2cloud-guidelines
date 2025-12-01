@@ -1,4 +1,9 @@
-# Documentation Guidelines
+---
+applyTo: "**/mkdocs.yml, docs/**/*.md, specs/**/*.md"
+description: "MkDocs-based documentation standards, ADRs/MADRs format, and living documentation practices"
+---
+
+# Documentation Standards
 
 ## Overview
 
@@ -53,7 +58,7 @@ Every project **MUST** follow this documentation structure:
 
 ## Required Tools & Installation
 
-### 1. Python & MkDocs
+### Python & MkDocs
 
 Install MkDocs and required plugins:
 
@@ -70,7 +75,7 @@ pip install mkdocs-minify-plugin
 pip install mkdocs-redirects
 ```
 
-### 2. Required `mkdocs.yml` Configuration
+### Required `mkdocs.yml` Configuration
 
 Create `mkdocs.yml` at the repository root with this **minimum** configuration:
 
@@ -157,14 +162,14 @@ nav:
 
 ## Documentation Standards
 
-### 1. Markdown Files
+### Markdown Files
 
 - **All documentation MUST be in Markdown** (`.md` files)
 - Use clear, descriptive filenames in kebab-case: `getting-started.md`, `api-reference.md`
 - Include frontmatter metadata when needed (title, description, tags)
 - Use proper heading hierarchy (H1 → H2 → H3, no skipping levels)
 
-### 2. Required Documentation Sections
+### Required Documentation Sections
 
 Every project **MUST** include these core documents:
 
@@ -175,7 +180,7 @@ Every project **MUST** include these core documents:
 5. **`docs/guides/development.md`**: Developer workflow, commands, and best practices
 6. **`docs/guides/deployment.md`**: Deployment procedures and CI/CD setup
 
-### 3. Architecture Decision Records (ADRs/MADRs)
+### Architecture Decision Records (ADRs/MADRs)
 
 - Store in `/specs/adr/` directory
 - Use sequential numbering: `0001-decision-title.md`, `0002-next-decision.md`
@@ -200,12 +205,12 @@ Accepted | Proposed | Deprecated | Superseded by [0005-new-decision.md]
 
 ## Context and Problem Statement
 
-[Describe the context and problem statement, e.g., in free form using two to three sentences.]
+[Describe the context and problem statement]
 
 ## Decision Drivers
 
-* [driver 1, e.g., a force, facing concern, ...]
-* [driver 2, e.g., a force, facing concern, ...]
+* [driver 1]
+* [driver 2]
 
 ## Considered Options
 
@@ -220,10 +225,10 @@ Chosen option: "[option 1]", because [justification].
 ### Consequences
 
 **Positive:**
-* [e.g., improvement of quality attribute satisfaction, follow-up decisions required, ...]
+* [improvement or benefit]
 
 **Negative:**
-* [e.g., compromising quality attribute, follow-up decisions required, ...]
+* [compromising quality attribute or trade-off]
 ```
 
 ## Local Development
@@ -291,30 +296,15 @@ jobs:
         run: mkdocs gh-deploy --force
 ```
 
-### Azure Static Web Apps (Alternative)
-
-For Azure deployments, build during CI and deploy to Azure Static Web Apps:
-
-```yaml
-- name: Build MkDocs
-  run: mkdocs build
-
-- name: Deploy to Azure Static Web Apps
-  uses: Azure/static-web-apps-deploy@v1
-  with:
-    app_location: "site"
-    output_location: ""
-```
-
 ## Documentation Best Practices
 
-### 1. Keep Documentation Updated
+### Keep Documentation Updated
 
 - **Update in place**: Modify existing documentation files directly—never create separate summaries
 - Documentation changes must be part of the same PR as code changes
 - Use git hooks to remind developers to update docs when changing APIs or features
 
-### 2. Writing Style
+### Writing Style
 
 - Use clear, concise language
 - Write in present tense ("The API returns..." not "The API will return...")
@@ -322,7 +312,7 @@ For Azure deployments, build during CI and deploy to Azure Static Web Apps:
 - Include code examples for all technical concepts
 - Add diagrams using Mermaid for architecture and flow documentation
 
-### 3. Code Examples
+### Code Examples
 
 Use fenced code blocks with language syntax highlighting:
 
@@ -339,7 +329,7 @@ const greeting: string = "Hello, World!";
 ```
 ````
 
-### 4. Admonitions
+### Admonitions
 
 Use Material theme admonitions for important information:
 
@@ -376,19 +366,3 @@ Before merging any documentation changes, verify:
 - **CI check**: MkDocs build must pass in CI pipeline before merge
 - **Code review**: Reviewers must verify documentation completeness and accuracy
 - **Automated checks**: Use pre-commit hooks to validate Markdown linting and MkDocs build
-
----
-
-## Quick Start Summary
-
-**For new projects:**
-
-1. Install MkDocs: `pip install mkdocs mkdocs-material`
-2. Create folder structure: `/docs`, `/specs/adr`, `/specs/journal`
-3. Create `mkdocs.yml` with Material theme configuration
-4. Write `docs/index.md` as the landing page
-5. Run `mkdocs serve` to preview locally
-6. Set up GitHub Actions workflow for automatic deployment
-7. Commit and push—documentation builds and deploys automatically
-
-**Remember**: Documentation is code. Treat it with the same rigor as your implementation.

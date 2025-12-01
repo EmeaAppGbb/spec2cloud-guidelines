@@ -1,4 +1,9 @@
-# General Guidelines
+---
+applyTo: "**/*"
+description: "General engineering principles, architecture patterns, and quality standards for spec2cloud projects"
+---
+
+# General Engineering Standards
 
 ## Mission
 
